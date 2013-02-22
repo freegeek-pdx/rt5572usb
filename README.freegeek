@@ -1,0 +1,4 @@
+This provides the RT5572STA driver for USB wireless devices with the appropriate ralink chipset.
+
+Examples include the TP-LINK N600 Model No:TL-WDN3200 
+usbid: 148f:5572 Ralink Technology, Corp
