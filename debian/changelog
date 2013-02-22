@@ -1,0 +1,5 @@
+rt5572usb (0.1~20130221.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Thu, 21 Feb 2013 16:56:05 -0800
