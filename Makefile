@@ -191,10 +191,10 @@ endif
 
 ifeq ($(PLATFORM),PC)
 # Linux 2.6
-LINUX_SRC = /lib/modules/$(shell uname -r)/build
+LINUX_SRC = /lib/modules/${kernelver}/build
 # Linux 2.4 Change to your local setting
 #LINUX_SRC = /usr/src/linux-2.4
-LINUX_SRC_MODULE = /lib/modules/$(shell uname -r)/kernel/drivers/net/wireless/
+LINUX_SRC_MODULE = /lib/modules/${kernelver}/kernel/drivers/net/wireless/
 CROSS_COMPILE = 
 endif
 
@@ -210,7 +210,7 @@ endif
 
 ifeq ($(PLATFORM),INF_TWINPASS)
 # Linux 2.6
-#LINUX_SRC = /lib/modules/$(shell uname -r)/build
+#LINUX_SRC = /lib/modules/${kernelver}/build
 # Linux 2.4 Change to your local setting
 LINUX_SRC = /project/stable/twinpass/release/2.0.1/source/kernel/opensource/linux-2.4.31/
 CROSS_COMPILE = mips-linux-
@@ -240,7 +240,7 @@ endif
 
 ifeq ($(PLATFORM),INF_AMAZON_SE)
 # Linux 2.6
-#LINUX_SRC = /lib/modules/$(shell uname -r)/build
+#LINUX_SRC = /lib/modules/${kernelver}/build
 # Linux 2.4 Change to your local setting
 LINUX_SRC = /backup/ifx/3.6.2.2/source/kernel/opensource/linux-2.4.31
 #CROSS_COMPILE = mips-linux-
@@ -417,7 +417,7 @@ ifeq ($(OSABL),YES)
 	cp -f $(RT28xx_DIR)/os/linux/rtnet$(MODULE)apsta.ko /tftpboot
 endif
 else
-	cp -f $(RT28xx_DIR)/os/linux/rt$(MODULE)sta.ko /tftpboot
+	cp -f $(RT28xx_DIR)/os/linux/rt$(MODULE)sta.ko  $(RT28xx_DIR)/
 ifeq ($(OSABL),YES)
 	cp -f $(RT28xx_DIR)/os/linux/rtutil$(MODULE)sta.ko /tftpboot
 	cp -f $(RT28xx_DIR)/os/linux/rtnet$(MODULE)sta.ko /tftpboot

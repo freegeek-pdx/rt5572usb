@@ -50,8 +50,8 @@ endif
 install:
 	install -d $(LINUX_SRC_MODULE)
 	install -m 644 -c $(addsuffix .ko,$(MOD_NAME)) $(LINUX_SRC_MODULE)
-	/sbin/depmod -a ${shell uname -r}
+	/sbin/depmod -a ${kernelver}
 
 uninstall:
 	rm -rf $(addprefix $(LINUX_SRC_MODULE),$(addsuffix .ko,$(MOD_NAME)))
-	/sbin/depmod -a ${shell uname -r}
+	/sbin/depmod -a ${kernelver}
